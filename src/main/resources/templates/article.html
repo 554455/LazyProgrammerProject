@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Book List</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/article.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/menu.css}"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+    </head>
+    <body>
+    <ul class="menu-main">
+        <li><a th:href="@{/}">Article</a></li>
+        <li><a href="">Music</a></li>
+        <li><a href="">Book</a></li>
+        <li><a th:href="@{createArticle/}">Create article</a></li>
+    </ul>
+        <div>
+            <div class="container" th:each="article : ${article}">
+
+                <div class="container_title">
+                    <h2 th:utext="${article.title}">..</h2>
+                </div>
+                <div class="container_content">
+                    <p th:utext="${article.bodyArticle}">...</p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

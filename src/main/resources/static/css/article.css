@@ -1,0 +1,18 @@
+.container{
+    background: white;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 4px;
+}
+.container_title{
+    padding: 4px;
+    text-align: center;
+    font-family: Comic mono;
+    color: #777777;
+}
+.container_content{
+    font-family: Comic mono;
+    line-height: 30px;
+    text-align: left;
+    color: #777777;
+}

@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #DCDCDC;
+}
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+.menu-main {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menu-main li {display: inline-block;}
+.menu-main a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 30px;
+    font-family: Comic mono, sans-serif;
+    font-size: x-large;
+    color: #777777;
+    transition: .3s linear;
+    position: relative;
+}
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #F58262;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+.menu-main a:before {left: 5px;}
+.menu-main a:after {right: 5px;}
+.menu-main a.current:before,
+.menu-main a.current:after,
+.menu-main a:hover:before,
+.menu-main a:hover:after {opacity: 1;}
+.menu-main a.current,
+.menu-main a:hover {color: #F58262;}
+@media(max-width:680px) {
+    .menu-main li {display: block;}
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #777777;
+}
+a:hover{
+    color: #F58262;
+}

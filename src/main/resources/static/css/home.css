@@ -1,0 +1,23 @@
+.container{
+    background: white;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 4px;
+}
+.container_title{
+    border: groove;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Comic mono;
+    color: #777777;
+}
+.container_content{
+    margin-top: 20px;
+    font-family: Comic mono;
+    line-height: 30px;
+    color: #777777;
+}
+
+.container_title:hover {
+    border-radius: 14px;
+}
