@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <title>Create article</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/create.css}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/menu.css}"/>
 </head>
 <body>
-<form action="#" th:action="@{/createArticle}" th:object="${article}" method="post">
+<ul class="menu-main">
+    <li><img src="/img/logo.jpg" alt=""></li>
+    <li><a th:href="@{/}">Article</a></li>
+    <li><a href="">Music</a></li>
+    <li><a href="">Book</a></li>
+    <li><a th:href="@{createArticle/}">Write article</a></li>
+</ul>
+<div class="container">
+    <form action="#" th:action="@{/createArticle}" th:object="${article}" method="post">
 
-    <div class="container_form_name">
-        <label for="title">name</label>
-        <input type="text" th:field="*{title}" id="title" placeholder="title">
-    </div>
+        <div class="container_form_name">
+            <input type="text" th:field="*{title}" id="title" placeholder="title">
+        </div>
 
-    <div class="container_form_description">
-        <label for="description">description</label>
-        <textarea type="text" th:field="*{description}" id="description" placeholder="description"></textarea>
-    </div>
+        <div class="container_form_description">
+            <textarea style="width: max-content" type="text" th:field="*{description}" id="description" placeholder="description"></textarea>
+        </div>
 
-    <div class="container_form_bodyArticle">
-        <label for="bodyArticle">bodyArticle</label>
-        <textarea type="text" th:field="*{bodyArticle}" id="bodyArticle" placeholder="bodyArticle"></textarea>
+        <div class="container_form_bodyArticle">
+            <textarea type="text" th:field="*{bodyArticle}" id="bodyArticle" placeholder="bodyArticle"></textarea>
 
-    </div>
+        </div>
 
-    <input type="submit" value="Create book">
+        <input type="submit" value="Create book">
 
-</form>
+    </form>
+</div>
+<script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 </body>
 </html>
